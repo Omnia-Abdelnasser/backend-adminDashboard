@@ -16,6 +16,11 @@ const app=express()
 app.use(express.json())
 
 app.use(logger)
+//security headers
+
+app.use(helmet())
+app.use(cors())
+
 //routes
 app.use('/doctors',require('./routes/doctor'))
 app.use('/patients',require('./routes/patient'))
