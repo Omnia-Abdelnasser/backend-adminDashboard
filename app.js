@@ -3,6 +3,8 @@ const express=require('express');
 const ConnectToDB = require('./config/db');
 const { notFound, errorHandler } = require('./middleware/error');
 const logger = require('./middleware/logger');
+// const helmet=require('helmet')
+// const cors=require('cors')
 require('dotenv').config()
 
 
@@ -18,8 +20,8 @@ app.use(express.json())
 app.use(logger)
 //security headers
 
-app.use(helmet())
-app.use(cors())
+// app.use(helmet())
+// app.use(cors())
 
 //routes
 app.use('/doctors',require('./routes/doctor'))
