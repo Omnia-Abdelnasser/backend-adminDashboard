@@ -6,9 +6,11 @@
   "author": "omnia abdelnasser",
   "type": "commonjs",
   "main": "app.js",
-  "scripts": {
-    "dev": "nodemon app.js"
-  },
+ "scripts": {
+  "dev": "nodemon app.js",
+  "start": "node app.js"
+}
+,
   "dependencies": {
     "bcrypt": "^6.0.0",
     "cores": "^0.8.5",
